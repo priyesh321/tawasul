@@ -73,7 +73,7 @@ export default class SideMenu extends Component {
                     <View style={styles.SideView}>
                         <Image style={{ height: 25, width: 25 }}
                             source={require('../images/library.png')} />
-                        <Text  style={styles.SideText}>E-Library</Text>
+                        <Text style={styles.SideText}>E-Library</Text>
                     </View>
                 </TouchableOpacity>
 
