@@ -39,7 +39,7 @@ export default class SideMenu extends Component {
                     </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('Events')}>
                     <View style={styles.SideView}>
                         <Icon name='event' />
                         <Text style={styles.SideText}>Events</Text>
@@ -54,7 +54,7 @@ export default class SideMenu extends Component {
                     </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('Groups')}>
                     <View style={styles.SideView}>
                         <Icon name='group' />
                         <Text style={styles.SideText}>Groups</Text>

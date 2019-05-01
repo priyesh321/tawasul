@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import Login from './src/components/Login';
-import SideMenu from './src/components/SideMenu'
+import SideMenu from './src/components/SideMenu';
+import Events from './src/components/Events';
+import Demo from './src/components/Demo';
+import Groups from './src/components/Groups';
 
 import { createStackNavigator, createDrawerNavigator, createAppContainer } from "react-navigation";
 const HomeDrawer = createDrawerNavigator({
@@ -26,8 +29,19 @@ const MainNavigator = createStackNavigator({
     },
     SideMenu: {
         screen: SideMenu,
+    },
+    Events: {
+        screen: Events,
+        
+    },
+    Demo: {
+        screen: Demo,
+       
+    },
+    Groups: {
+        screen: Groups,
+        
     }
-
 },
     {
         initialRouteName: 'Login',

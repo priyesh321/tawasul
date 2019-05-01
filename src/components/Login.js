@@ -11,37 +11,21 @@ import {
 } from 'react-native';
 import { Container, Content, Footer, FooterTab, Button, Header, Left, Right, Title, Body, Subtitle, Icon } from 'native-base';
 import { TouchableOpacity, TouchableWithoutFeedback } from 'react-native-gesture-handler';
+import DeviceInfo from 'react-native-device-info';
 
 import ImagePicker from 'react-native-image-picker';
 
 export default class Login extends React.Component {
-    state = {
-        ImageSource: null,
-    };
-    componentDidMount() {
-        this.watchID = navigator.geolocation.watchPosition((position) => {
-            // Create the object to update this.state.mapRegion through the onRegionChange function
-            let region = {
-                latitude: position.coords.latitude,
-                longitude: position.coords.longitude,
-                latitudeDelta: 0.00922 * 1.5,
-                longitudeDelta: 0.00421 * 1.5
-            }
-            this.onRegionChange(region, region.latitude, region.longitude);
-        }, (error) => console.log(error));
+    constructor(props) {
+        super(props)
+        state = {
+            ImageSource: null,
+            lat: 40.7809261,
+            lng: -73.9637594
+        };
+        const deviceCountry = DeviceInfo.getDeviceCountry(); // "US"
+        console.log(deviceCountry, 'Country Name')
     }
-    onRegionChange(region, lastLat, lastLong) {
-        this.setState({
-            mapRegion: region,
-            // If there are no new values set the current ones
-            lastLat: lastLat || this.state.lastLat,
-            lastLong: lastLong || this.state.lastLong
-        });
-    }
-    componentWillUnmount() {
-        navigator.geolocation.clearWatch(this.watchID);
-    }
-
     selectPhotoTapped() {
         const options = {
             quality: 1.0,
@@ -51,7 +35,6 @@ export default class Login extends React.Component {
                 skipBackup: true
             }
         };
-
         ImagePicker.showImagePicker(options, (response) => {
             console.log('Response = ', response);
 
@@ -72,7 +55,6 @@ export default class Login extends React.Component {
             }
         });
     }
-
 
     render() {
         return (
@@ -128,8 +110,9 @@ export default class Login extends React.Component {
                     <View style={{ height: 0.2, backgroundColor: 'grey', marginTop: 15 }}>
 
                     </View>
+                    
 
-                </Content>
+              </Content>
 
                 <Footer>
                     <FooterTab style={{ backgroundColor: '#05B8CC' }}>
