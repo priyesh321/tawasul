@@ -1,14 +1,7 @@
 import React, { Component } from "react";
-import {
-    StyleSheet,
-    Text,
-    View,
-    TextInput,
-    Image
-} from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
 import { TouchableOpacity, ScrollView } from "react-native-gesture-handler";
-import { Container, Content, Footer, FooterTab, Button, Header, Left, Right, Title, Body, Subtitle, Icon } from 'native-base';
-
+import { Container, Content, Footer, FooterTab, Button, Header, Right, Title, Body, Icon } from 'native-base';
 
 export default class Events extends Component {
     constructor(props) {
@@ -19,7 +12,6 @@ export default class Events extends Component {
 
     render() {
         return (
-
             <Container>
                 <Header style={{ backgroundColor: '#fd8103' }}>
                     <Body style={{ right: 1 }}>
@@ -43,7 +35,6 @@ export default class Events extends Component {
                         <View style={{ flexDirection: 'row', marginTop: 15 }}>
 
                             <TouchableOpacity>
-
                                 <View style={{ height: 70, width: 100, backgroundColor: '#fdbc2e', marginLeft: 5, borderRadius: 5, justifyContent: 'center' }}>
                                     <Image style={{ height: 25, width: 25, alignSelf: 'center', marginTop: 10 }}
                                         source={require('../images/today.png')} />
@@ -55,7 +46,7 @@ export default class Events extends Component {
                             </TouchableOpacity>
 
                             <TouchableOpacity>
-                                <View style={{ height: 70, width: 100, backgroundColor: '#27c6e6', marginLeft: 5, borderRadius: 5, justifyContent: 'center' }}>
+                                <View style={{ height: 70, width: 100, backgroundColor: '#27C6E1', marginLeft: 5, borderRadius: 5, justifyContent: 'center' }}>
                                     <Image style={{ height: 25, width: 25, alignSelf: 'center', marginTop: 10 }}
                                         source={require('../images/tomorrow.png')} />
 
@@ -66,7 +57,7 @@ export default class Events extends Component {
                             </TouchableOpacity>
 
                             <TouchableOpacity>
-                                <View style={{ height: 70, width: 100, backgroundColor: '#f89923', marginLeft: 5, borderRadius: 5, justifyContent: 'center' }}>
+                                <View style={{ height: 70, width: 100, backgroundColor: '#F89923', marginLeft: 5, borderRadius: 5, justifyContent: 'center' }}>
                                     <Image style={{ height: 25, width: 25, alignSelf: 'center', marginTop: 10 }}
                                         source={require('../images/calendar.png')} />
                                     <Text style={{ alignSelf: 'center', marginTop: 5 }}>
@@ -76,7 +67,7 @@ export default class Events extends Component {
                             </TouchableOpacity>
 
                             <TouchableOpacity>
-                                <View style={{ height: 70, width: 100, backgroundColor: '#a4d05f', marginLeft: 5, borderRadius: 5, justifyContent: 'center' }}>
+                                <View style={{ height: 70, width: 100, backgroundColor: '#A4D05F', marginLeft: 5, borderRadius: 5, justifyContent: 'center' }}>
                                     <Image style={{ height: 25, width: 25, alignSelf: 'center', marginTop: 10 }}
                                         source={require('../images/month.png')} />
                                     <Text style={{ alignSelf: 'center', marginTop: 5, color: 'white' }}>
@@ -87,10 +78,10 @@ export default class Events extends Component {
 
                             <TouchableOpacity>
 
-                                <View style={{ height: 70, width: 100, backgroundColor: '#a9a9a9', marginLeft: 5, borderRadius: 5, justifyContent: 'center' }}>
-                                    <Image style={{ height: 25, width: 25, alignSelf: 'center', marginTop: 10, tintColor: 'black' }}
+                                <View style={{ height: 70, width: 100, backgroundColor: '#8A8A8A', marginLeft: 5, borderRadius: 5, justifyContent: 'center' }}>
+                                    <Image style={{ height: 25, width: 25, alignSelf: 'center', marginTop: 10, tintColor: '#FFFFFF' }}
                                         source={require('../images/custom.png')} />
-                                    <Text style={{ alignSelf: 'center', marginTop: 5 }}>
+                                    <Text style={{ alignSelf: 'center', marginTop: 5, color: '#FFFFFF' }}>
                                         Custom
                                     </Text>
                                 </View>
@@ -100,7 +91,7 @@ export default class Events extends Component {
                 </Content>
 
                 <Footer>
-                    <FooterTab style={{ backgroundColor: '#05B8CC' }}>
+                    <FooterTab style={{ backgroundColor: '#2EC2E4' }}>
                         <Button >
                             <Image style={styles.buttonImage}
                                 source={require('../images/home.png')} />
@@ -124,7 +115,6 @@ export default class Events extends Component {
                     </FooterTab>
                 </Footer>
             </Container>
-
         );
     }
 }
@@ -151,6 +141,6 @@ const styles = StyleSheet.create({
     buttonImage: {
         height: 25,
         width: 25,
-        tintColor: 'white',
+        tintColor: 'white'
     },
 });

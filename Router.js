@@ -4,6 +4,8 @@ import SideMenu from './src/components/SideMenu';
 import Events from './src/components/Events';
 import Demo from './src/components/Demo';
 import Groups from './src/components/Groups';
+import EmployeeDirectory from './src/components/EmployeeDirectory';
+import Occasions from './src/components/Occasions';
 
 import { createStackNavigator, createDrawerNavigator, createAppContainer } from "react-navigation";
 const HomeDrawer = createDrawerNavigator({
@@ -32,15 +34,18 @@ const MainNavigator = createStackNavigator({
     },
     Events: {
         screen: Events,
-        
     },
     Demo: {
         screen: Demo,
-       
     },
     Groups: {
         screen: Groups,
-        
+    },
+    EmployeeDirectory: {
+        screen: EmployeeDirectory
+    },
+    Occasions: {
+        screen: Occasions
     }
 },
     {

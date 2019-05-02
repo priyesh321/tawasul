@@ -1,12 +1,5 @@
 import React, { Component } from 'react';
-import {
-    StyleSheet,
-    Text,
-    View,
-    TouchableOpacity,
-    Image
-} from 'react-native';
-
+import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
 import { Icon } from 'react-native-elements';
 
 export default class SideMenu extends Component {
@@ -18,7 +11,7 @@ export default class SideMenu extends Component {
         return (
             <View style={styles.container}>
 
-                <View style={{ height: 100, backgroundColor: '#FF8C00' }}>
+                <View style={{ height: 100, backgroundColor: '#FFB617' }}>
                     <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                         <Image style={{ height: 70, width: 70, marginTop: 20 }}
                             source={require('../images/avatar.png')} />
@@ -46,7 +39,7 @@ export default class SideMenu extends Component {
                     </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('EmployeeDirectory')}>
                     <View style={styles.SideView}>
                         <Image style={{ height: 25, width: 25 }}
                             source={require('../images/directory.png')} />
@@ -61,7 +54,7 @@ export default class SideMenu extends Component {
                     </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity >
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('Occasions')}>
                     <View style={styles.SideView}>
                         <Image style={{ height: 25, width: 25 }}
                             source={require('../images/occasion.png')} />
@@ -79,7 +72,7 @@ export default class SideMenu extends Component {
 
                 <View style={{ height: 1, backgroundColor: 'grey', marginTop: 30 }}>
                 </View>
-                <TouchableOpacity onPress={() => this.props.navigation.navigate("Events")}>
+                <TouchableOpacity>
                     <View style={styles.SideView}>
                         <Image style={{ height: 25, width: 25 }}
                             source={require('../images/logout.png')} />

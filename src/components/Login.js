@@ -1,18 +1,8 @@
 import React, { } from 'react';
-import {
-    View,
-    Text,
-    Image,
-    StyleSheet,
-    PixelRatio,
-    Alert,
-    Platform
-
-} from 'react-native';
+import { View, Text, Image, StyleSheet, } from 'react-native';
 import { Container, Content, Footer, FooterTab, Button, Header, Left, Right, Title, Body, Subtitle, Icon } from 'native-base';
 import { TouchableOpacity, TouchableWithoutFeedback } from 'react-native-gesture-handler';
 import DeviceInfo from 'react-native-device-info';
-
 import ImagePicker from 'react-native-image-picker';
 
 export default class Login extends React.Component {
@@ -79,11 +69,11 @@ export default class Login extends React.Component {
 
                 <Content>
                     <TouchableWithoutFeedback>
-                        <View style={{ marginTop: 20, width: '95%', height: 45, marginLeft: 10, backgroundColor: '#D3D3D3', borderRadius: 10, flexDirection: 'row', justifyContent: 'space-between' }}>
-                            <Text style={{ padding: 12, color: '#808080' }}>
+                        <View style={{ marginTop: 20, width: '95%', height: 45, marginLeft: 10, backgroundColor: '#E9E9E9', borderRadius: 10, flexDirection: 'row', justifyContent: 'space-between' }}>
+                            <Text style={{ padding: 12, color: '#B6B6B6' }}>
                                 What's on your mind today ?
                             </Text>
-                            <View style={{ backgroundColor: '#05B8CC', height: 50, width: '20%', borderTopRightRadius: 10, borderBottomRightRadius: 10 }}>
+                            <View style={{ backgroundColor: '#22C5E9', height: 50, width: '20%', borderTopRightRadius: 10, borderBottomRightRadius: 10 }}>
                                 <Image style={{ height: 30, width: 30, left: 16, top: 7, tintColor: 'white' }}
                                     source={require('../images/forward.png')} />
                             </View>
@@ -92,30 +82,27 @@ export default class Login extends React.Component {
 
                     <View style={{ flexDirection: 'row', marginTop: 15, marginLeft: 10 }}>
                         <TouchableOpacity onPress={this.selectPhotoTapped.bind(this)}>
-                            <Image style={{ height: 25, width: 25, tintColor: '#00C5CD' }}
+                            <Image style={{ height: 25, width: 25, tintColor: '#2EC2E4' }}
                                 source={require('../images/attach.png')} />
                         </TouchableOpacity>
 
                         <TouchableOpacity>
-                            <Image style={{ height: 25, width: 25, tintColor: '#00C5CD', marginLeft: 25 }}
+                            <Image style={{ height: 25, width: 25, tintColor: '#2EC2E4', marginLeft: 25 }}
                                 source={require('../images/marker.png')} />
                         </TouchableOpacity>
 
                         <TouchableOpacity onPress={this.selectPhotoTapped.bind(this)}>
-                            <Image style={{ height: 25, width: 25, tintColor: '#00C5CD', marginLeft: 30 }}
+                            <Image style={{ height: 25, width: 25, tintColor: '#2EC2E4', marginLeft: 30 }}
                                 source={require('../images/screenshot.png')} />
                         </TouchableOpacity>
                     </View>
 
                     <View style={{ height: 0.2, backgroundColor: 'grey', marginTop: 15 }}>
-
                     </View>
-                    
-
-              </Content>
+                </Content>
 
                 <Footer>
-                    <FooterTab style={{ backgroundColor: '#05B8CC' }}>
+                    <FooterTab style={{ backgroundColor: '#2EC2E4' }}>
                         <Button >
                             <Image style={styles.buttonImage}
                                 source={require('../images/home.png')} />
