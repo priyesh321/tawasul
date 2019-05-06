@@ -1,6 +1,6 @@
 import React, { } from 'react';
 import { View, Text, Image, StyleSheet, } from 'react-native';
-import { Container, Content, Footer, FooterTab, Button, Header, Left, Right, Title, Body, Subtitle, Icon } from 'native-base';
+import { Container, Content, Footer, FooterTab, Button, Header, Right, Title, Body, Subtitle, Icon } from 'native-base';
 import { TouchableOpacity, TouchableWithoutFeedback } from 'react-native-gesture-handler';
 import DeviceInfo from 'react-native-device-info';
 import ImagePicker from 'react-native-image-picker';
@@ -107,18 +107,22 @@ export default class Login extends React.Component {
                             <Image style={styles.buttonImage}
                                 source={require('../images/home.png')} />
                         </Button>
-                        <Button >
+
+                        <Button>
                             <Image style={styles.buttonImage}
                                 source={require('../images/camera.png')} />
                         </Button>
-                        <Button >
+
+                        <Button>
                             <Image style={styles.buttonImage}
                                 source={require('../images/calendar.png')} />
                         </Button>
+
                         <Button>
                             <Image style={styles.buttonImage}
                                 source={require('../images/group.png')} />
                         </Button>
+
                         <Button >
                             <Image style={styles.buttonImage}
                                 source={require('../images/menu.png')} />

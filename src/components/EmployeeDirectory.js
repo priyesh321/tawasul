@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View, Image, TextInput } from "react-native";
-import { TouchableOpacity, ScrollView } from "react-native-gesture-handler";
+import { StyleSheet, View, Image, TextInput } from "react-native";
+import { TouchableOpacity } from "react-native-gesture-handler";
 import { Container, Content, Footer, FooterTab, Button, Header, Right, Title, Body, Icon } from 'native-base';
 
 export default class EmployeeDirectory extends Component {
@@ -13,7 +13,7 @@ export default class EmployeeDirectory extends Component {
     render() {
         return (
             <Container>
-                <Header style={{ backgroundColor: '#fd8103' }}>
+                <Header style={{ backgroundColor: '#FD8103' }}>
                     <Body style={{ right: 1 }}>
                         <Title>Employee Directory</Title>
                     </Body>
@@ -34,7 +34,7 @@ export default class EmployeeDirectory extends Component {
                     <View style={{ marginTop: 10, height: 60, width: '95%', marginLeft: 10, borderRadius: 4, borderColor: 'lightgrey', borderWidth: 1, zIndex: 50 }}>
                         <View style={{ marginLeft: 10, marginTop: 15, flexDirection: 'row' }}>
                             <TouchableOpacity>
-                                <Image style={{ height: 25, width: 25,tintColor:'#2EC2E4' }}
+                                <Image style={{ height: 25, width: 25, tintColor: '#2EC2E4' }}
                                     source={require('../images/filter.png')} />
                             </TouchableOpacity>
 
@@ -46,37 +46,41 @@ export default class EmployeeDirectory extends Component {
                                     placeholderTextColor="grey"
                                 />
                                 <TouchableOpacity>
-                                    <Image style={{ height: 25, width: 25, marginRight: 8, marginTop: 5,tintColor:'#fd8103' }}
+                                    <Image style={{ height: 25, width: 25, marginRight: 8, marginTop: 5, tintColor: '#fd8103' }}
                                         source={require('../images/search.png')} />
                                 </TouchableOpacity>
                             </View>
                         </View>
-
                     </View>
                 </Content>
 
                 <Footer>
                     <FooterTab style={{ backgroundColor: '#2EC2E4' }}>
-                        <Button >
+                        <Button>
                             <Image style={styles.buttonImage}
                                 source={require('../images/home.png')} />
                         </Button>
-                        <Button >
+
+                        <Button>
                             <Image style={styles.buttonImage}
                                 source={require('../images/camera.png')} />
                         </Button>
-                        <Button >
+
+                        <Button>
                             <Image style={styles.buttonImage}
                                 source={require('../images/calendar.png')} />
                         </Button>
+
                         <Button>
                             <Image style={styles.buttonImage}
                                 source={require('../images/group.png')} />
                         </Button>
-                        <Button >
+
+                        <Button>
                             <Image style={styles.buttonImage}
                                 source={require('../images/menu.png')} />
                         </Button>
+
                     </FooterTab>
                 </Footer>
             </Container>

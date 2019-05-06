@@ -1,12 +1,5 @@
 import React, { Component } from 'react';
-import {
-    StyleSheet,
-    Text,
-    View,
-    TouchableOpacity,
-    Image
-} from 'react-native';
-
+import { StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import Dash from 'react-native-dash';
 import { ScrollView } from 'react-native-gesture-handler';
 
@@ -39,7 +32,7 @@ export default class Demo extends Component {
                         <View style={{ marginLeft: 10 }}>
                             <Text style={{ fontSize: 18, color: 'black' }}>
                                 Name
-                        </Text>
+                            </Text>
                         </View>
 
                     </View>
@@ -47,10 +40,10 @@ export default class Demo extends Component {
                     <View style={{ flexDirection: 'row', marginLeft: 60, justifyContent: 'space-between' }}>
                         <Text style={{ fontSize: 16, color: 'black', marginLeft: 15 }}>
                             May 26, 2019
-                </Text>
+                        </Text>
                         <Text style={{ fontSize: 16, color: 'black', right: 15 }}>
                             15:40
-                </Text>
+                        </Text>
 
                     </View>
 

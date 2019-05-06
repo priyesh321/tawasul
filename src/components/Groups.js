@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
 import { TouchableOpacity, ScrollView } from "react-native-gesture-handler";
-import { Container, Content, Footer, FooterTab, Button, Header, Left, Right, Title, Body, Icon } from 'native-base';
+import { Container, Content, Footer, FooterTab, Button, Header, Right, Title, Body, Icon } from 'native-base';
 
 export default class Groups extends Component {
     constructor(props) {
@@ -13,7 +13,7 @@ export default class Groups extends Component {
     render() {
         return (
             <Container>
-                <Header style={{ backgroundColor: '#fd8103' }}>
+                <Header style={{ backgroundColor: '#FD8103' }}>
                     <Body style={{ right: 1 }}>
                         <Title>Groups</Title>
                     </Body>
@@ -34,11 +34,9 @@ export default class Groups extends Component {
                     <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
                         <View style={{ flexDirection: 'row', marginTop: 15 }}>
                             <TouchableOpacity>
-
                                 <View style={{ height: 70, width: 100, backgroundColor: '#fdbc2e', marginLeft: 5, borderRadius: 5, justifyContent: 'center' }}>
                                     <Image style={{ height: 25, width: 25, alignSelf: 'center', marginTop: 10 }}
                                         source={require('../images/today.png')} />
-
                                     <Text style={{ alignSelf: 'center', marginTop: 5 }}>
                                         Today
                                     </Text>
@@ -46,7 +44,6 @@ export default class Groups extends Component {
                             </TouchableOpacity>
 
                             <TouchableOpacity>
-
                                 <View style={{ height: 70, width: 100, backgroundColor: '#27C6E1', marginLeft: 5, borderRadius: 5, justifyContent: 'center' }}>
                                     <Image style={{ height: 25, width: 25, alignSelf: 'center', marginTop: 10 }}
                                         source={require('../images/tomorrow.png')} />
@@ -58,7 +55,6 @@ export default class Groups extends Component {
                             </TouchableOpacity>
 
                             <TouchableOpacity>
-
                                 <View style={{ height: 70, width: 100, backgroundColor: '#F89923', marginLeft: 5, borderRadius: 5, justifyContent: 'center' }}>
                                     <Image style={{ height: 25, width: 25, alignSelf: 'center', marginTop: 10 }}
                                         source={require('../images/calendar.png')} />
@@ -93,26 +89,31 @@ export default class Groups extends Component {
 
                 <Footer>
                     <FooterTab style={{ backgroundColor: '#2EC2E4' }}>
-                        <Button >
+                        <Button>
                             <Image style={styles.buttonImage}
                                 source={require('../images/home.png')} />
                         </Button>
-                        <Button >
+
+                        <Button>
                             <Image style={styles.buttonImage}
                                 source={require('../images/camera.png')} />
                         </Button>
-                        <Button >
+
+                        <Button>
                             <Image style={styles.buttonImage}
                                 source={require('../images/calendar.png')} />
                         </Button>
+
                         <Button>
                             <Image style={styles.buttonImage}
                                 source={require('../images/group.png')} />
                         </Button>
-                        <Button >
+
+                        <Button>
                             <Image style={styles.buttonImage}
                                 source={require('../images/menu.png')} />
                         </Button>
+
                     </FooterTab>
                 </Footer>
             </Container>

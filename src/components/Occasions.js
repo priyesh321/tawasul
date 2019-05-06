@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View, Image, TextInput } from "react-native";
-import { TouchableOpacity, ScrollView } from "react-native-gesture-handler";
+import { StyleSheet, Image, } from "react-native";
+import { TouchableOpacity, } from "react-native-gesture-handler";
 import { Container, Content, Footer, FooterTab, Button, Header, Right, Title, Body, Icon } from 'native-base';
 import CalendarStrip from "react-native-calendar-strip";
 
@@ -34,35 +34,39 @@ export default class EmployeeDirectory extends Component {
                 <Content>
                     <CalendarStrip
                         calendarAnimation={{ type: 'sequence', duration: 30 }}
-                        daySelectionAnimation={{ type: 'border', duration: 300, }}
+                        daySelectionAnimation={{ type: 'border', duration: 300 }}
                         style={{ height: 70 }}
-                        calendarHeaderStyle={{ color: 'white' }}
-                        calendarColor={'#2EC2E4'}
-                        dateNumberStyle={{ color: 'white' }}
-                        dateNameStyle={{ color: 'white' }}
+                        calendarHeaderStyle={{ color: '#2EC2E4' }}
+                        calendarColor={'#FFFFFF'}
+                        dateNumberStyle={{ color: 'black' }}
+                        dateNameStyle={{ color: 'grey' }}
                         iconContainer={{ flex: 0.1 }}
                     />
                 </Content>
 
                 <Footer>
                     <FooterTab style={{ backgroundColor: '#2EC2E4' }}>
-                        <Button >
+                        <Button>
                             <Image style={styles.buttonImage}
                                 source={require('../images/home.png')} />
                         </Button>
-                        <Button >
+
+                        <Button>
                             <Image style={styles.buttonImage}
                                 source={require('../images/camera.png')} />
                         </Button>
-                        <Button >
+
+                        <Button>
                             <Image style={styles.buttonImage}
                                 source={require('../images/calendar.png')} />
                         </Button>
+
                         <Button>
                             <Image style={styles.buttonImage}
                                 source={require('../images/group.png')} />
                         </Button>
-                        <Button >
+
+                        <Button>
                             <Image style={styles.buttonImage}
                                 source={require('../images/menu.png')} />
                         </Button>
